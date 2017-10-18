@@ -1,27 +1,39 @@
-<html>
-<body>
-	<table width="405" height="169" border="0" cellpadding="0" cellspacing="0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/simple-grid.min.css">
+</head>
+<body class="login">
+	<center>
+		<header>
+			<h1>Login</h1>			
+		</header>
 
-    <tr bgcolor="#428ef6">
-      <td height="37" colspan="2"><div align="center"><strong>PLEASE LOGIN</strong></div></td>
-    </tr>
-    <tr>
-      <td width="100" height="32">Username</td>
-      <td width="304"><label>:
-          <input name="username" type="text" id="username" />
-      </label></td>
-    </tr>
-    <tr>
-      <td height="26">Password</td>
-      <td><label>:
-          <input name="password" type="password" id="password" />
-      </label></td>
-    </tr>
-    <tr>
-      <td height="48"> </td>
-      <td><input name="Login" type="submit" id="Login" value="Login" />
-          <input name="Batal" type="submit" id="Batal" value="Batal" /></td>
-    </tr>
-  </table>
+		<div class="container">
+			<div class="login-welcome">
+				<p>Welcome To</p>
+				<p>blablabla</p>
+			</div>
+			<br>
+			<div class="login-form">
+				<form action="" name="login">
+					<input type="text" name="username" placeholder="Username/Email">
+					<br>
+					<input type="password" name="password" placeholder="Password">
+					<br>
+					<input type="button" name="login-btn" value="Log In">
+				</form>
+
+				<p>Don't have an account <a href="">Sign Up</a></p>
+			</div>
+		</div>	
+	</center>
+	
+	
+	
+
 </body>
 </html>
