@@ -1,0 +1,191 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/***************************************************************************/
+
+header {
+	background: #f8f8f8;
+	padding: 35px;
+	border-bottom: solid 1px #bcbcbc;
+	margin-bottom: 75px;
+}
+header h1 {
+	font-size: 3em;
+}
+
+.home header {
+	text-align: center;	
+}
+
+/*
+.window {
+	width: 1000px;
+}
+*/
+@media(min-width: 1366px) {
+	/*.window {
+		width: 750px;
+	}*/
+	.home-post {
+		width: 750px;
+		height: 700px;
+	}
+}
+
+.friends-photo {
+	border-radius: 50%;
+	width: 125px;
+	height: 125px;
+	margin-right: 50px;
+	margin-top: 25px;
+}
+
+.friends-name {
+	display: inline-block;
+	padding: 25px 100px 25px 100px ;
+	border: solid 1px #c2c2c2;
+	vertical-align: middle;
+	font-size: 2em;
+	margin-bottom: 100px;
+}
+
+.home-post {
+	margin-top: -75px;
+	margin-bottom: 50px;
+}
+
+/***************************************************************************************************/
+
+.profile header h2 {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+}
+
+.right {
+	float: right;
+	display: block;
+}
+.left {
+	float: left;
+	display: block;
+}
+
+.profile a {
+	font-size: 25px;	
+}
+
+.profile-photo {
+	padding-right: 100px;
+}
+
+.profile-name {
+	display: inline-block;
+	padding: 25px 75px;
+	border: solid 1px #c2c2c2;
+	vertical-align: middle;
+	font-size: 2em;
+	margin-bottom: 200px;
+}
+
+.profile-bio {
+	width: 500px;
+	height: 100px;
+	margin-top: -100px;
+}
+
+.profile-bio p{
+	font-size: 1.5em;
+}
+
+.gallery-header {
+	text-align: center;
+	margin-top: 100px;
+	border: solid 1px #c2c2c2;
+	border-radius: 10px;
+}
+
+.gallery-photo {
+	width: 300px;
+	height: 250px;
+	margin: 13px;
+}
+
+.login-welcome {
+	border: solid 2px #c2c2c2;
+	padding: 75px 0;
+	margin-bottom: 100px;
+}
+
+.login-welcome p {
+	vertical-align: bottom;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+
+.login-form input[type=text],.login-form input[type=password] {
+	width: 700px;
+	margin: 10px 0;
+	font-size: 1.5em;
+	border: solid 2px #c2c2c2;
+	padding: 10px 20px;
+}
+
+.login-form input[type=text]::-webkit-input-placeholder,.login-form input[type=password]::-webkit-input-placeholder {
+	color: black;
+	text-align: center;
+}
+
+.login-form input[type=button] {
+	width: 740px;
+	margin-top: 50px;
+	background: none;
+	font-size: 1.5em;
+	border: solid 2px #c2c2c2;
+	cursor: pointer;
+	padding: 20px 0px;
+	margin-bottom: 100px;
+	border-radius: 10px;
+}
