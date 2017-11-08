@@ -23,4 +23,3 @@ class SS extends CI_Controller {
 		$this->load->view('v_login');
 	}
 }
-
