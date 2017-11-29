@@ -5,7 +5,7 @@ class SS extends CI_Controller {
 	public function index() {
 		$id = $this->input->get('id');
 
-		$this->load->model('m_user');
+		//$this->load->model('m_user');
 		// $data['response'] = $this->m_user->get($id);
 		// $this->load->view('v_html',$data);
 		$dt['user'] = $this->m_user->get($id);
@@ -21,5 +21,8 @@ class SS extends CI_Controller {
 
 	public function login() {
 		$this->load->view('v_login');
+	}
+	public function register() {
+		$this->load->view('v_register');
 	}
 }
