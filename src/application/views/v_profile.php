@@ -9,9 +9,10 @@
 <body class="profile">
 	<header class="navbar">
 		<ul>
-			<h3>Stalk Shoot</h3>
-			<a class="menu right" href="profile.html"> <img class="profile-icon right" src="<?php echo base_url(); ?>static/img/profile.png" alt="Profile" width="20px"></a>
-			<a class="menu right" href=""><img class="profile-icon right" src="<?php echo base_url(); ?>static/img/logout.png" alt="Profile" width="20px"></a>
+			<a href="<?php echo base_url(); ?>SS/home"><h3>Stalk Shoot</h3></a>
+			<a class="menu right" href="<?php echo base_url(); ?>SS/profile"> <img class="profile-icon right" src="<?php echo base_url(); ?>static/img/profile.png" alt="Profile" width="20px"></a>
+
+			<a class="menu right" href="<?php echo base_url(); ?>SS/logout"><img class="profile-icon right" src="<?php echo base_url(); ?>static/img/logout.png" alt="Profile" width="20px"></a>
 			<center><input class="search-box" type="input" name="search" placeholder="Search"></center>
 		</ul>
 	</header>

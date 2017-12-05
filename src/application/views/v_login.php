@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+if (isset($this->session->userdata['logged_in'])) {
+header("location: SS/login");
+}
+?>
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/style.css">
-	<link rel="stylesheet" href="?php echo base_url(); ?>static/css/simple-grid.min.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/simple-grid.min.css">
 </head>
 <body class="login">
 	<center>
@@ -15,25 +20,31 @@
 		<div class="container">
 			<div class="login-welcome">
 				<p>Welcome To</p>
-				<p>Snap Shoot</p>
+				<p>Stalk Shoot</p>
 			</div>
 			<br>
 			<div class="login-form">
-				<form action="" name="login">
+				<?php echo form_open('SS/login'); ?>
+				<?php
+					echo "<div class='error_msg'>";
+      				if (isset($error_message)) {
+       					echo $error_message;
+      				}
+     				echo validation_errors();
+     				echo "</div>";
+     			?>
 					<input type="text" name="username" placeholder="Username/Email">
 					<br>
 					<input type="password" name="password" placeholder="Password">
 					<br>
-					<input style="background-color:hsla(9, 100%, 64%, 0.5);" type="button" name="login-btn" value="Log In">
-				</form>
+					<input style="background-color:hsla(9, 100%, 64%, 0.5);" type="submit" name="login-btn" value="Log In">
+				<?php echo form_close(); ?>
 
-				<p>Don't have an account <a href="">Sign Up</a></p>
 			</div>
+
 		</div>	
 	</center>
 	
 	
-	
-
 </body>
 </html>
