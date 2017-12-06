@@ -35,6 +35,23 @@ class SS extends CI_Controller {
 		$this->load->view('v_home');
 	}
 
+  public function profilfriend() {
+    $this->load->view('v_profilfriend');
+  }
+
+  public function detail() {
+    $this->load->view('v_detail');
+  }
+
+  public function upload() {
+    $this->load->view('v_upload');
+  }
+
+  public function upload_photo() {
+   $this->load->model('m_field');
+    
+  }
+
 	// Check for user login process
   public function login() {
    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
