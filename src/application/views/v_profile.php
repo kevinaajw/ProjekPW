@@ -36,12 +36,12 @@ else {
 		</div>
 
 		<div class="profile-gallery row">
-			<img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/10.jpg" alt="">
-			<img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/9.jpg" alt="">
-			<img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/8.png" alt="">
-			<img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/5.jpg" alt="">
-			<img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/7.png" alt="">
-			<img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/2.jpg" alt="">
+			<a href="<?php echo base_url(); ?>SS/detail"><img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/10.jpg" alt=""></a>
+			<a href="<?php echo base_url(); ?>SS/detail"><img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/9.jpg" alt="">
+			<a href="<?php echo base_url(); ?>SS/detail"><img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/8.png" alt="">
+			<a href="<?php echo base_url(); ?>SS/detail"><img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/5.jpg" alt="">
+			<a href="<?php echo base_url(); ?>SS/detail"><img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/7.png" alt="">
+			<a href="<?php echo base_url(); ?>SS/detail"><img class="gallery-photo col-4" src="<?php echo base_url(); ?>static/img/2.jpg" alt="">
 		</div>
 
 	</div>

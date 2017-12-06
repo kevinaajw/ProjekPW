@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+if(!isset($this->session->userdata['logged_in'])){header('location:login');}
+else {
+ $username = ($this->session->userdata['logged_in']['username']);
+ }
+?>
 <head>
 	<meta charset="UTF-8">
 	<title>Photo</title>
@@ -23,7 +29,7 @@
 			<div class="post">
 				<img class="detail-profil" src="<?php echo base_url(); ?>static/img/profilefr.jpg" width="20%" height="20%">
 
-				<p class="friends-name">Sisyly12</p>
+				<p class="friends-name"><?php echo $username ?></p>
 				<div class="home-post">
 					<img src="<?php echo base_url(); ?>static/img/10.jpg" width="100%" height="100%">
 				</div>
