@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+if(!isset($this->session->userdata['logged_in'])){header('location:login');}
+else {
+ $username = ($this->session->userdata['logged_in']['username']);
+ $id = ($this->session->userdata['logged_in']['id']);
+ }
+?>
 <head>
 	<meta charset="UTF-8">
-	<title>upload</title>
+	<title>Upload</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/style.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/simple-grid.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -19,13 +26,15 @@
 		</ul>
 	</header>
 <center>
-	<br><br>
-		<form id="form1" runat="server" method="post" action="<?php echo base_url(); ?>SS/upload_photo">
-		<div class="home-post">
-					<img id="blah" src="#" alt="your image" name="image" width="100%" height="100%"/>
-		</div>	
-		<input type="file" id="imgInp">
-		<input type="submit" name="submit" class="gallery-header col-2" style="background-color:hsla(9, 100%, 64%, 0.5);" value="Done">
+	<br>
+		<form id="form1" method="post" action="<?php echo base_url(); ?>SS/upload_photo" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="<?php echo $id ?>">
+			<input type="hidden" name="username" value="<?php echo $username ?>">
+			<div class="home-post">
+				<img id="blah" class="imgpreview" src="#" alt="your image"/>
+			</div>	
+			<input type="file" id="imgInp" name="foto" accept='image/*'>
+			<input type="submit" name="submit" class="gallery-header col-2" style="background-color:hsla(9, 100%, 64%, 0.5);" value="Done">
 		</form>
   
 

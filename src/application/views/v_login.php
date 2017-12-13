@@ -39,6 +39,7 @@ header("location: SS/login");
 					<br>
 					<input style="background-color:hsla(9, 100%, 64%, 0.5);" type="submit" name="login-btn" value="Log In">
 				<?php echo form_close(); ?>
+					<a style="background-color:hsla(9, 100%, 64%, 0.5);" href="<?php echo base_url(); ?>SS/form"><input style="background-color:hsla(9, 100%, 64%, 0.5);" type="submit" value="Sign Up"></a>
 
 			</div>
 

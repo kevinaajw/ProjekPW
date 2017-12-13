@@ -185,6 +185,9 @@ header .search-box {
 	margin-top: 7px;
 }
 
+.body {
+	background-color: : #8c030d;
+}
 
 .login-form input[type=text],.login-form input[type=password] {
 	width: 700px;

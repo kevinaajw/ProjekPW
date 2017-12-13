@@ -1,53 +1,28 @@
 <?php
-class m_field extends CI_Model{
+class m_upload extends CI_Model{
 	
 	public function __construct(){
 		$this->load->database();
 	}
 	
-	public function get(){
-		$query = $this->db->get('field');
-		return $query->result_array();
-	}
-	
-	public function input($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact)
+	public function input($id, $path, $hasil, $username, $upload_date)
 		{
 			$data = array(
 				'id' => $id,
-				'category_id' => $category_id,
-				'name' => $name,
-				'address' => $address,
-				'open_hour' => $open_hour,
-				'close_hour' => $close_hour,
-				'price' => $price,
-				'contact' => $contact
+				'path' => $path,
+				'img' => $hasil,
+				'username' => $username,
+				'upload_date' => $upload_date
 			);
 
-			if ($this->db->insert('field', $data)){
+			if ($this->db->insert('photo', $data)){
 				return TRUE;
 			}
 		}
 	
 	public function pilih($id){
 			$this->db->where('id', $id);
-			return $this->db->get('field');
-	}
-	
-	public function update($id, $category_id, $name, $address, $open_hour, $close_hour, $price, $contact){
-		$data = array(
-			'category_id' => $category_id,
-			'name' => $name,
-			'address' => $address,
-			'open_hour' => $open_hour,
-			'close_hour' => $close_hour,
-			'price' => $price,
-			'contact' => $contact
-		);
-		$this->db->where('id', $id);
-		$this->db->update('field', $data);
-		if($this->db->update('field', array('category_id' => $category_id, 'name' => $name, 'address' => $address, 'open_hour' => $open_hour, 'close_hour' => $close_hour, 'price' => $price, 'contact' => $contact))){
-		  return TRUE;
-		}
+			return $this->db->get('photo');
 	}
 	
 	public function hapus($id){

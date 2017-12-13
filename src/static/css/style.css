@@ -88,6 +88,13 @@ header .search-box {
 	}
 }
 
+.detail-profil {
+	border-radius: 50%;
+	width: 125px;
+	height: 125px;
+	margin-right: 50px;
+}
+
 .friends-photo {
 	border-radius: 50%;
 	width: 125px;
@@ -108,6 +115,7 @@ header .search-box {
 .home-post {
 	margin-top: -75px;
 	margin-bottom: 50px;
+	border : 1px solid #dcdcdc;
 }
 
 /***************************************************************************************************/
@@ -209,4 +217,14 @@ header .search-box {
 	padding: 20px 0px;
 	margin-bottom: 100px;
 	border-radius: 10px;
+}
+
+.imgpreview{
+	width: 600px;
+	height: 600px;
+}
+
+.imgdetail{
+	width: 100%;
+	height: 600px;
 }

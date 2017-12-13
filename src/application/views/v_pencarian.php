@@ -8,14 +8,13 @@ else {
 ?>
 <head>
 	<meta charset="UTF-8">
-	<title>Photo</title>
+	<title>Home</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/style.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/simple-grid.min.css">
 </head>
-<body class="detail">
+<body class="home">
 	<header class="navbar">
-	
-			<ul>
+		<ul>
 			<a href="<?php echo base_url(); ?>SS/home"><h3>Stalk Shoot</h3></a>
 			<a class="menu right" href="<?php echo base_url(); ?>SS/profile"> <img class="profile-icon right" src="<?php echo base_url(); ?>static/img/profile.png" alt="Profile" width="20px"></a>
 
@@ -28,22 +27,14 @@ else {
 			</center>
 		</ul>
 	</header>
-	
-	<center>
+	<?php foreach($results as $row) { ?>
 		<div class="container">
-			<div class="post">
-				<?php foreach($pp->result() as $data) {} ?>
-				<img class="detail-profil" src="<?php echo base_url(); ?>static/img/<?php echo $data->photo_id ?>" width="20%" height="20%">
-				
-				<?php foreach($response->result() as $row) { ?>
-				<p class="friends-name"><?php echo $row->username ?></p>
-				<div class="profile-gallery row">
-						<img class="gallery-photo col-6" src="<?php echo $row->path.$row->img ?>" alt="">
-				<?php } ?>
-				</div>
-
-		</div>	
-	</center>	
-
+			<a href="<?php echo base_url().'SS/profilfriend/'.$row['id'];?>">
+			<img class="friends-photo" src="<?php echo base_url();?>static/img/<?php echo $row['photo_id'] ?>" alt="">
+			<p class="profile-name"><?php echo $row['username'] ?></p>
+			</a>
+		</div>
+		
+	<?php } ?>
 </body>
 </html>
