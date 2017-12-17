@@ -24,7 +24,7 @@
     </header>
     <div class="container">
         <div class="login-form">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
             <form action="<?php echo base_url(); ?>SS/register_akun" method="post" id="form1" enctype="multipart/form-data">
                 <?php
 					echo "<div class='error_msg'>";
