@@ -10,20 +10,24 @@ header("location: SS/login");
 	<title>Login</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/style.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>static/css/simple-grid.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="login">
-	<center>
-		<header>
-			<h1>Login</h1>			
-		</header>
-
+<header class="navbar">
+<div class="row">
+	<ul>
+		<li class="col-offset-2 col-9" style="text-align:left;">
+			<a href="<?php echo base_url(); ?>SS/home">
+				<i class="fa fa-camera-retro" aria-hidden="true"></i>
+				<h3>Stalk Shoot</h3>
+			</a>
+		</li>
+	</ul>
+</div>
+</header>
 		<div class="container">
-			<div class="login-welcome">
-				<p>Welcome To</p>
-				<p>Stalk Shoot</p>
-			</div>
-			<br>
 			<div class="login-form">
+				<h1>Login</h1>
 				<?php echo form_open('SS/login'); ?>
 				<?php
 					echo "<div class='error_msg'>";
@@ -32,14 +36,20 @@ header("location: SS/login");
       				}
      				echo validation_errors();
      				echo "</div>";
-     			?>
-					<input type="text" name="username" placeholder="Username/Email">
-					<br>
-					<input type="password" name="password" placeholder="Password">
-					<br>
-					<input style="background-color:hsla(9, 100%, 64%, 0.5);" type="submit" name="login-btn" value="Log In">
+				 ?>
+				 <div class="content">
+					 <input type="text" name="username" placeholder="Username/Email" required>
+				 </div>
+				 <div class="content">
+					 <input type="password" name="password" placeholder="Password" required>
+				 </div>
+				 <div class="content">
+					 <input type="submit" class="login-btn" value="Log In">
+				 </div>
 				<?php echo form_close(); ?>
-					<a style="background-color:hsla(9, 100%, 64%, 0.5);" href="<?php echo base_url(); ?>SS/form"><input style="background-color:hsla(9, 100%, 64%, 0.5);" type="submit" value="Sign Up"></a>
+				<div class="content">
+					Don't have an account?<a style="color:blue; font-weight: bold; text-decoration: none;" href="<?php echo base_url(); ?>SS/form"> Sign up</a>
+				</div>
 
 			</div>
 
